@@ -23,10 +23,10 @@ class DynamicLinkBuilder:
     def __init__(self, client):
         self.client = client
 
-    def generate_long_link(self, app_code, is_partial_link=False, **kwargs):
+    def generate_long_link(self, app_code, is_partial_link=True, **kwargs):
         return generate_long_link(app_code=app_code, query_params=kwargs, is_partial_link=is_partial_link)
 
-    def generate_short_link(self, app_code, is_partial_link=False, **kwargs):
+    def generate_short_link(self, app_code, is_partial_link=True, **kwargs):
         return generate_short_link(client=self.client, app_code=app_code, query_params=kwargs, is_partial_link=is_partial_link)
 
 
